@@ -1,5 +1,7 @@
+#include "pspch.h"
 #include "Application.h"
-
+#include "Events/ApplicationEvent.h"
+#include "Psico/Log.h"
 
 namespace Psico
 {
@@ -15,6 +17,10 @@ namespace Psico
 
 	void Application::Run()
 	{
+
+		WindowResizeEvent e(1280, 720);
+		PS_TRACE(e);
+
 		while (true);
 	}
 }
