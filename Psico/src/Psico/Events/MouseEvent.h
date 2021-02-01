@@ -99,4 +99,27 @@ namespace Psico {
 		EVENT_CLASS_TYPE(MouseButtonReleased)
 	};
 
+	class MousePassedWindowBorderEvent : public Event
+	{
+	public:
+		EVENT_CLASS_CATEGORY(EventCategoryMouse | EventCategoryInput)
+		MousePassedWindowBorderEvent(bool entered)
+		: m_Entered(entered)
+		{}
+		
+		bool GetCursorInsideWindow() { return m_Entered;  }
+
+		std::string ToString() const override
+		{
+			std::stringstream ss;
+			ss << "MousePassedWindowBorderEvent: " << m_Entered;
+			return ss.str();
+		}
+		
+		EVENT_CLASS_TYPE(MousePassedWindowBorder)
+	private:
+		bool m_Entered;
+
+	};
+
 }

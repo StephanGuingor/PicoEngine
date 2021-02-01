@@ -4,3 +4,6 @@
 [submodule "Psico/vendor/GLFW"]
 	path = Psico/vendor/GLFW
 	url = https://github.com/StephanGuingor/glfw
+[submodule "Psico/vendor/imgui"]
+	path = Psico/vendor/imgui
+	url = https://github.com/StephanGuingor/imgui
